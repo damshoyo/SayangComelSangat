@@ -28,9 +28,9 @@ html {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  top: 20px;
-  margin-bottom: 30px;
-  width: 350px;
+  top: 200px;
+  margin-bottom: 300px;
+  width: 400px;
 }
 
 #tap {
@@ -179,3 +179,4 @@ body {
   padding: 0;
   text-align: center;
 }
+
