@@ -56,7 +56,7 @@ const _slideDua = function () {
     tap.classList.add('d-none');
     setTimeout(function () {
       slideSatu.classList.add('d-none');
-    }, 6000);
+    }, 3000);
   }, 1000);
 
   slideDua.classList.remove('d-none');
@@ -446,4 +446,5 @@ function confetti() {
 
   if (!onlyOnKonami) poof();
 };
+
 
