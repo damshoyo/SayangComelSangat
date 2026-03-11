@@ -69,9 +69,9 @@ const _slideDua = function () {
       setTimeout(function () {
         slideDua.remove();
         _slideTiga();
-      }, 10000);
+      }, 1000);
     })
-  }, 48000);
+  }, 60000);
 };
 
 const _slideTiga = function () {
@@ -88,7 +88,7 @@ const _slideTiga = function () {
       setTimeout(function () {
         slideTiga.remove();
         _slideEmpat();
-      }, 10000);
+      }, 1000);
     })
   }, 40000);
 }
@@ -131,7 +131,7 @@ const _slideLima = function () {
 
   setTimeout(() => {
     trims.classList.remove('d-none');
-  }, 1000);
+  }, 70);
 
   slideLima.addEventListener('animationend', () => {
     slideLima.classList.add('animate__delay-3s')
@@ -143,7 +143,7 @@ const _slideLima = function () {
         slideLima.remove();
         _slideEnam();
       }, 1000);
-    }, 3000);
+    }, 30000);
   });
 };
 
@@ -155,7 +155,7 @@ const _slideEnam = function () {
 
 new TypeIt("#teks1", {
   strings: ["Hari ini, dah masuk bulan kelima kita together sayang.", "I harap kita akan kekal lagi lama together and grow together.", "I doakan agar kita akan kahwin and build a happy family together.", "Since meeting you, it has been always a great company." , "Meeting you have been making my black and white world into colourful and rainbow.", "Sayang dah banyak ubah diri i untuk jadi lagi better.", "Tanpa sayang i takkan cuba untuk ubah beri sayang perhatian dan kegembiraan.", "I harap sayang akan tetap stay dengan i no matter apapun yang terjadi"],
-  startDelay: 5000,
+  startDelay: 2000,
   speed: 75,
   waitUntilVisible: true
 }).go();
@@ -170,7 +170,7 @@ new TypeIt("#teks2", {
 
 new TypeIt("#trims", {
   strings: ["Terima kasih sayang sebab sanggup spend time untuk i."],
-  startDelay: 3000,
+  startDelay: 50,
   speed: 75,
   loop: false,
   waitUntilVisible: true,
@@ -448,7 +448,45 @@ function confetti() {
 };
 
 
+// ---------------------------
+// Polaroid Addon Functions
+// ---------------------------
 
+// Show Polaroid slide
+function showPolaroidSlide() {
+  const polaroidSection = document.getElementById('polaroidSection');
+  polaroidSection.classList.remove('d-none');
+
+  // Optional: floating hearts around Polaroid
+  const colors = ['#ff6b6b','#ff3d6b','#ff85a1','#ff4d94'];
+  for (let i = 0; i < 20; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const rect = polaroidSection.getBoundingClientRect();
+    p.style.left = rect.left + Math.random() * rect.width + 'px';
+    p.style.top = rect.top + Math.random() * rect.height + 'px';
+    p.style.fontSize = 10 + Math.random() * 15 + 'px';
+    p.style.color = colors[Math.floor(Math.random() * colors.length)];
+    p.style.animationDuration = 2 + Math.random() * 2 + 's';
+    document.body.appendChild(p);
+  }
+}
+
+// Insert Polaroid slide after slideEmpat finishes
+const sukaBtn = document.getElementById('suka');
+sukaBtn.addEventListener('click', function() {
+  // Wait a tiny bit to finish slideEmpat animations
+  setTimeout(() => {
+    showPolaroidSlide(); // fade in Polaroids
+    const polaroidSection = document.getElementById('polaroidSection');
+
+    // Wait for fadeIn animation to finish, then show slideLima
+    polaroidSection.addEventListener('animationend', function handler() {
+      polaroidSection.removeEventListener('animationend', handler);
+      _slideLima(); // continue with original last slide
+    });
+  }, 10000); 
+});
 
 
 

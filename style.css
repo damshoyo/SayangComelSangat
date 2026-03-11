@@ -181,3 +181,82 @@ body {
 }
 
 
+/* ---------------------------
+   Polaroid Addon Styles
+--------------------------- */
+#polaroidSection {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.polaroid {
+  background: white;
+  padding: 10px 10px 30px 10px;
+  border-radius: 5px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  width: 250px;
+  text-align: center;
+}
+
+.polaroid img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.caption {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.love {
+  font-size: 60px;
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: beat 1s infinite;
+}
+
+@keyframes beat {
+  0%,100% { transform: scale(1); }
+  25%,75% { transform: scale(1.3); }
+  50% { transform: scale(1); }
+}
+
+.polaroid.left { animation: swayLeft 1s infinite; transform-origin: right center; }
+.polaroid.right { animation: swayRight 1s infinite; transform-origin: left center; }
+
+@keyframes swayLeft {
+  0%,100% { transform: rotate(-5deg); }
+  25%,75% { transform: rotate(-2deg) scale(1.02); }
+  50% { transform: rotate(-5deg); }
+}
+
+@keyframes swayRight {
+  0%,100% { transform: rotate(5deg); }
+  25%,75% { transform: rotate(2deg) scale(1.02); }
+  50% { transform: rotate(5deg); }
+}
+
+.polaroid:hover { transform: rotate(0deg) scale(1.05); animation: none; }
+
+/* Floating hearts */
+.particle {
+  position: absolute;
+  font-size: 15px;
+  color: pink;
+  animation: floatUp linear infinite;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  50% { transform: translateY(-50px) scale(1.3); opacity: 0.7; }
+  100% { transform: translateY(-100px) scale(0.8); opacity: 0; }
+}
