@@ -15,7 +15,7 @@ const second = 1000,
   minute = second * 60,
   hour = minute * 60,
   day = hour * 24;
-let countDown = new Date('Oct 22, 2023 00:00:00').getTime(),
+let countDown = new Date('March 12, 2026 00:00:00').getTime(),
   x = setInterval(function () {
     let now = new Date().getTime(),
       distance = countDown - now;
@@ -56,7 +56,7 @@ const _slideDua = function () {
     tap.classList.add('d-none');
     setTimeout(function () {
       slideSatu.classList.add('d-none');
-    }, 1000);
+    }, 3000);
   }, 1000);
 
   slideDua.classList.remove('d-none');
@@ -71,7 +71,7 @@ const _slideDua = function () {
         _slideTiga();
       }, 1000);
     })
-  }, 40000);
+  }, 48000);
 };
 
 const _slideTiga = function () {
@@ -88,9 +88,9 @@ const _slideTiga = function () {
       setTimeout(function () {
         slideTiga.remove();
         _slideEmpat();
-      }, 1000);
+      }, 3000);
     })
-  }, 43000);
+  }, 40000);
 }
 
 function getRandomPosition(element) {
@@ -143,7 +143,7 @@ const _slideLima = function () {
         slideLima.remove();
         _slideEnam();
       }, 1000);
-    }, 6000);
+    }, 3000);
   });
 };
 
@@ -154,14 +154,14 @@ const _slideEnam = function () {
 
 
 new TypeIt("#teks1", {
-  strings: ["Hari ini, saya langitkan semua doa terbaik saya untuk kamu.", "Semoga hal-hal yang membuat kamu runtuh turut menjadi alasan kamu untuk tetap tumbuh.", "Semoga dunia senantiasa menjaga kamu dimanapun kamu berada.", "Semoga hari-hari kamu selalu diiringi cinta yang tak pernah ada batasnya." , "Semoga setiap langkahmu dimudahkan hingga tercapai apa yang kamu inginkan."],
-  startDelay: 4000,
+  strings: ["Hari ini, dah masuk bulan kelima kita together sayang.", "I harap kita akan kekal lagi lama together and grow together.", "I doakan agar kita akan kahwin and build a happy family together.", "Since meeting you, it has been always a great company." , "Meeting you have been making my black and white world into colourful and rainbow.", "Sayang dah banyak ubah diri i untuk jadi lagi better.", "Tanpa sayang i takkan cuba untuk ubah beri sayang perhatian dan kegembiraan.", "I harap sayang akan tetap stay dengan i no matter apapun yang terjadi"],
+  startDelay: 5000,
   speed: 75,
   waitUntilVisible: true
 }).go();
 
 new TypeIt("#teks2", {
-  strings: ["Dengan ataupun tanpaku, semoga semesta selalu membahagiakan kamu bagimanapun caranya.", " ", "barakallah fi umrik, terima kasih sudah bertahan sampai sejauh ini.", " ", "- Wish all you the best"],
+  strings: ["I sayangggg youuu sangat soooo jangannn buat bendaa bukan-bukan okayyy.", "I would do anything for my baby sooo pleaseee jangannn pergi tauuu tungguu i omkeee", "Even with me or not, i hope that world will be kind to you and jaga sayang dengan elok.", " ", "i loveee youuu sooo muchhh Nur Rania Damia Amanina binti Rafli.", " ", "- More years to go with you!!! <3"],
   startDelay: 2000,
   speed: 75,
   waitUntilVisible: true
@@ -169,9 +169,9 @@ new TypeIt("#teks2", {
 
 
 new TypeIt("#trims", {
-  strings: ["Terimakasih."],
-  startDelay: 2000,
-  speed: 150,
+  strings: ["Terima kasih sayang sebab sanggup spend time untuk i."],
+  startDelay: 3000,
+  speed: 75,
   loop: false,
   waitUntilVisible: true,
 }).go();
