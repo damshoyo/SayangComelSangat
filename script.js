@@ -69,7 +69,7 @@ const _slideDua = function () {
       setTimeout(function () {
         slideDua.remove();
         _slideTiga();
-      }, 1000);
+      }, 10000);
     })
   }, 48000);
 };
@@ -88,7 +88,7 @@ const _slideTiga = function () {
       setTimeout(function () {
         slideTiga.remove();
         _slideEmpat();
-      }, 3000);
+      }, 10000);
     })
   }, 40000);
 }
@@ -446,6 +446,7 @@ function confetti() {
 
   if (!onlyOnKonami) poof();
 };
+
 
 
 
