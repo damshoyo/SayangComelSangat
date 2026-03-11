@@ -56,7 +56,7 @@ const _slideDua = function () {
     tap.classList.add('d-none');
     setTimeout(function () {
       slideSatu.classList.add('d-none');
-    }, 1000);
+    }, 6000);
   }, 1000);
 
   slideDua.classList.remove('d-none');
@@ -69,9 +69,9 @@ const _slideDua = function () {
       setTimeout(function () {
         slideDua.remove();
         _slideTiga();
-      }, 1000);
+      }, 6000);
     })
-  }, 40000);
+  }, 50000);
 };
 
 const _slideTiga = function () {
@@ -90,7 +90,7 @@ const _slideTiga = function () {
         _slideEmpat();
       }, 1000);
     })
-  }, 43000);
+  }, 50000);
 }
 
 function getRandomPosition(element) {
@@ -170,7 +170,7 @@ new TypeIt("#teks2", {
 
 new TypeIt("#trims", {
   strings: ["Terimakasih."],
-  startDelay: 2000,
+  startDelay: 1000,
   speed: 150,
   loop: false,
   waitUntilVisible: true,
@@ -194,7 +194,7 @@ function confetti() {
     frame = undefined,
     confetti = [];
 
-  var runFor = 2000
+  var runFor = 4000
   var isRunning = true
 
   setTimeout(() => {
@@ -446,3 +446,4 @@ function confetti() {
 
   if (!onlyOnKonami) poof();
 };
+
