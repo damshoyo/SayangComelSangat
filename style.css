@@ -30,7 +30,7 @@ html {
   position: relative;
   top: 200px;
   margin-bottom: 300px;
-  width: 400px;
+  width: 500px;
 }
 
 #tap {
@@ -179,4 +179,5 @@ body {
   padding: 0;
   text-align: center;
 }
+
 
